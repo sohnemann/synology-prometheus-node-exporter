@@ -1,16 +1,15 @@
+# Deploy the Prometheus Node Exporter on a Synology Node, with Docker.
+
 ## Dependencies
 - [Synology Docker](https://www.synology.com/en-global/dsm/packages/Docker) package already installed.
 - SSH access to synology.
 - Administrator user access.
 
 
-### Install
+## Install
 ```bash
-curl -fsSL https://raw.githubusercontent.com/prahaladramji/synology-prometheus/master/setup | sudo sh
+curl -fsSL https://raw.githubusercontent.com/lucasmaurice/synology-prometheus/master/setup | sudo sh
 ```
 
-#### Endpoints 
-- Grafana `http://<synology ip/hostname>:3000` (this may take upto 15 seconds to start up.)
-- Prometheus `http://<synology ip/hostname>:9090`
-- Alertmanager `http://<synology ip/hostname>:9093`
+## Endpoints 
 - Node-Exporter `http://<synology ip/hostname>:9100/metrics`
