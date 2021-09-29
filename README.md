@@ -8,7 +8,9 @@
 
 ## Install
 ```bash
+sudo -i
 curl -fsSL https://raw.githubusercontent.com/merc1031/synology-prometheus-node-exporter/master/setup.sh --output synology-prometheus-setup.sh
+bash ./synology-prometheus-setup.sh
 ```
 
 ## Endpoints 
