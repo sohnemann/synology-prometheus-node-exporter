@@ -18,3 +18,16 @@ services:
       - "--collector.filesystem.ignored-mount-points"
       - "^/(rootfs/)?(dev|etc|host|proc|run|sys|volume1)($$|/)"
       - '--collector.bonding'
+      
+  prometheus:
+  
+    image: prom/prometheus
+    container_name: prometheus
+    restart: always
+    links:
+      - node-exporter
+    ports:
+      - "9090:9090"
+    volumes:
+      - ${PROMETHEUS_ROOT}/configs/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ${PROMETHEUS_ROOT}/data/prometheus:/prometheus
